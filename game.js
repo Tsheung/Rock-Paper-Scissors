@@ -5,14 +5,14 @@ function computerPlay() {
     return choices[num];
 }
 
-//playerSelection input is case-insensitive
+//playerSelection input is case-insensitive DELETE
 function caseInsensitive(str) {
     return str[0].toUpperCase() + str.slice(1).toLowerCase();
 }
 
 //Win vs Lose
 function playRound(playerSelection, computerSelection) {
-    //inputs playerselection to not sensitive
+    //inputs playerselection to not sensitive DELETE
     playerSelection = caseInsensitive(playerSelection);
 
     if (playerSelection === computerSelection) {
@@ -61,6 +61,16 @@ buttons.forEach((b) => {
 
             console.log(msg);
             console.log(`You: ${playerPoints}, PC: ${computerPoints}`);
+        }
+
+        //Only reacts if clicked an extra time....
+        else if (playerPoints == 5 || computerPoints == 5) {
+            if (playerPoints == 5) {
+                alert("Game Over! You Win!");
+            }
+            else {
+                alert("Game Over! You Lose.");
+            }
         }
 
     });
