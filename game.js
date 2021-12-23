@@ -50,7 +50,10 @@ scoring.textContent = `${playerPoints} - ${computerPoints}`;
 body.appendChild(scoring);
 
 //Results
-
+const result = document.createElement('div');
+result.classList.add('result');
+result.textContent = '';
+body.appendChild(result);
 
 
 //Click Response
@@ -69,12 +72,15 @@ buttons.forEach((b) => {
             if (msg.includes("Win") == true) {
                 playerPoints +=1;
                 scoring.textContent = `${playerPoints} - ${computerPoints}`;
+                //result.textContent = msg;
             } else if (msg.includes("Lose") == true) {
                 computerPoints +=1;
                 scoring.textContent = `${playerPoints} - ${computerPoints}`;
+                //result.textContent = msg;
             } 
 
             console.log(msg);
+            result.textContent = msg;
             console.log(`You: ${playerPoints}, PC: ${computerPoints}`);
         }
 
@@ -83,9 +89,11 @@ buttons.forEach((b) => {
             if (playerPoints == 5) {
                 alert("Game Over! You Win!");
                 //Maybe div to restart and state win!
+                
             }
             else {
                 alert("Game Over! You Lose.");
+                
             }
         }
 
