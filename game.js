@@ -49,6 +49,9 @@ scoring.textContent = `${playerPoints} - ${computerPoints}`;
 
 body.appendChild(scoring);
 
+//Results
+
+
 
 //Click Response
 buttons.forEach((b) => {
@@ -74,27 +77,22 @@ buttons.forEach((b) => {
             console.log(msg);
             console.log(`You: ${playerPoints}, PC: ${computerPoints}`);
         }
+
+        //Stops at 5 points
+        if (playerPoints == 5 || computerPoints == 5) {
+            if (playerPoints == 5) {
+                alert("Game Over! You Win!");
+                //Maybe div to restart and state win!
+            }
+            else {
+                alert("Game Over! You Lose.");
+            }
+        }
+
     });
 });
 
 
-
-
-
-
-
-
-/*
-//Only reaches 5 points
-if (playerPoints == 5 || computerPoints == 5) {
-    if (playerPoints == 5) {
-        alert("Game Over! You Win!");
-    }
-    else {
-        alert("Game Over! You Lose.");
-    }
-}
-*/
 
 
 
