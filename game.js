@@ -58,11 +58,12 @@ function game() {
 }
 
 //retrieve all buttons
-const buttons = document.querySelectorAll('img');
+const buttons = document.querySelectorAll('.Images div');
+console.log(buttons);
 
 buttons.forEach((b) => {
     b.addEventListener('click', () => {
-        console.log(b.class);
+        console.log(b.className);
     });
 });
 
