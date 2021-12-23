@@ -40,6 +40,16 @@ const buttons = document.querySelectorAll('.Images div');
 let playerPoints = 0;
 let computerPoints = 0;
 
+//Scoreboard
+const body = document.querySelector('body');
+
+const scoring = document.createElement('div');
+scoring.classList.add('scoring');
+scoring.textContent = `${playerPoints} - ${computerPoints}`;
+
+body.appendChild(scoring);
+
+
 //Click Response
 buttons.forEach((b) => {
     b.addEventListener('click', () => {
@@ -55,29 +65,37 @@ buttons.forEach((b) => {
             //Adds total points
             if (msg.includes("Win") == true) {
                 playerPoints +=1;
+                scoring.textContent = `${playerPoints} - ${computerPoints}`;
             } else if (msg.includes("Lose") == true) {
                 computerPoints +=1;
+                scoring.textContent = `${playerPoints} - ${computerPoints}`;
             } 
 
             console.log(msg);
             console.log(`You: ${playerPoints}, PC: ${computerPoints}`);
         }
-
-        //Only reacts if clicked an extra time....
-        else if (playerPoints == 5 || computerPoints == 5) {
-            if (playerPoints == 5) {
-                alert("Game Over! You Win!");
-            }
-            else {
-                alert("Game Over! You Lose.");
-            }
-        }
-
     });
 });
 
 
-//buttons.onclick = function () {}
+
+
+
+
+
+
+/*
+//Only reaches 5 points
+if (playerPoints == 5 || computerPoints == 5) {
+    if (playerPoints == 5) {
+        alert("Game Over! You Win!");
+    }
+    else {
+        alert("Game Over! You Lose.");
+    }
+}
+*/
+
 
 
 
