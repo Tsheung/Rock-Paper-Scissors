@@ -72,14 +72,14 @@ buttons.forEach((b) => {
             if (msg.includes("Win") == true) {
                 playerPoints +=1;
                 scoring.textContent = `${playerPoints} - ${computerPoints}`;
-                //result.textContent = msg;
+               
             } else if (msg.includes("Lose") == true) {
                 computerPoints +=1;
                 scoring.textContent = `${playerPoints} - ${computerPoints}`;
-                //result.textContent = msg;
+    
             } 
 
-            console.log(msg);
+            //console.log(msg); DELETE
             result.textContent = msg;
             console.log(`You: ${playerPoints}, PC: ${computerPoints}`);
         }
@@ -87,12 +87,10 @@ buttons.forEach((b) => {
         //Stops at 5 points
         if (playerPoints == 5 || computerPoints == 5) {
             if (playerPoints == 5) {
-                alert("Game Over! You Win!");
-                //Maybe div to restart and state win!
-                
+                result.textContent = "Game Over! You Win!";
             }
             else {
-                alert("Game Over! You Lose.");
+                result.textContent = "Game Over! You Lose!";
                 
             }
         }
