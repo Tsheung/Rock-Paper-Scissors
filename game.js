@@ -57,6 +57,14 @@ function game() {
     }
 }
 
+//retrieve all buttons
+const buttons = document.querySelectorAll('img');
+
+buttons.forEach((b) => {
+    b.addEventListener('click', () => {
+        console.log(b.class);
+    });
+});
 
 
-game();
+//game();
