@@ -41,20 +41,12 @@ let playerPoints = 0;
 let computerPoints = 0;
 
 //Scoreboard
-const body = document.querySelector('body');
-
-const scoring = document.createElement('div');
-scoring.classList.add('scoring');
+const scoring = document.querySelector('.scoring');
 scoring.textContent = `${playerPoints} - ${computerPoints}`;
 
-body.appendChild(scoring);
-
 //Results
-const result = document.createElement('div');
-result.classList.add('result');
+const result = document.querySelector('.result');
 result.textContent = '';
-body.appendChild(result);
-
 
 //Click Response
 buttons.forEach((b) => {
@@ -97,8 +89,9 @@ buttons.forEach((b) => {
 
     });
 });
-
-
+//Change DOM to html
+//Add button -> Refresh program
+//CSS
 
 
 
