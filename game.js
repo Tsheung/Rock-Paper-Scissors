@@ -5,15 +5,8 @@ function computerPlay() {
     return choices[num];
 }
 
-//playerSelection input is case-insensitive DELETE
-function caseInsensitive(str) {
-    return str[0].toUpperCase() + str.slice(1).toLowerCase();
-}
-
 //Win vs Lose
 function playRound(playerSelection, computerSelection) {
-    //inputs playerselection to not sensitive DELETE
-    playerSelection = caseInsensitive(playerSelection);
 
     if (playerSelection === computerSelection) {
         return `You Tied! Both of you chose ${playerSelection}`; 
@@ -51,7 +44,6 @@ result.textContent = '';
 //Click Response
 buttons.forEach((b) => {
     b.addEventListener('click', () => {
-        //console.log(b.className);
         
         if (playerPoints < 5 && computerPoints < 5) {
             let computerSelection = computerPlay();
@@ -68,7 +60,6 @@ buttons.forEach((b) => {
             } else if (msg.includes("Lose") == true) {
                 computerPoints +=1;
                 scoring.textContent = `${playerPoints} - ${computerPoints}`;
-    
             } 
 
             //console.log(msg); DELETE
