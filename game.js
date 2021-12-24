@@ -62,7 +62,6 @@ buttons.forEach((b) => {
                 scoring.textContent = `${playerPoints} - ${computerPoints}`;
             } 
 
-            //console.log(msg); DELETE
             result.textContent = msg;
             console.log(`You: ${playerPoints}, PC: ${computerPoints}`);
         }
@@ -81,13 +80,13 @@ buttons.forEach((b) => {
     });
 });
 
+//Refresh button
 const button = document.querySelector("#refresh");
 button.addEventListener("click", () => {
     location.reload();
 })
 
-//Change DOM to html
-//CSS
+
 
 
 
