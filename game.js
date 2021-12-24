@@ -89,8 +89,13 @@ buttons.forEach((b) => {
 
     });
 });
+
+const button = document.querySelector("#refresh");
+button.addEventListener("click", () => {
+    location.reload();
+})
+
 //Change DOM to html
-//Add button -> Refresh program
 //CSS
 
 
