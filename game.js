@@ -26,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-//retrieve all buttons
+//Retrieve all image buttons
 const buttons = document.querySelectorAll('.Images div');
 
 //Count
